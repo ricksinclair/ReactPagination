@@ -46,7 +46,14 @@ class Movies extends Component {
     let { movies } = this.state;
     return (
       <div>
-        {/* building fictional movie rental component for a warmup */}
+        {/* 
+        
+        Building fictional movie rental component for a warmup 
+        
+        API Documentation here: https://developers.themoviedb.org/3/search/search-movies
+        
+        
+        */}
         <h2 className="display-3 mt-4 text-center">Movies Component</h2>
         <table className="table">
           <thead>
@@ -69,7 +76,7 @@ class Movies extends Component {
                 </tr>
               );
             })}
-          </tbody>{" "}
+          </tbody>
         </table>
       </div>
     );
