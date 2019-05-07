@@ -11,6 +11,9 @@ export default class Movies extends Component {
     });
   }
 
+  deleteMovie = () => {
+    console.log("delete pressed");
+  };
   render() {
     let { movies } = this.state;
 
@@ -38,11 +41,19 @@ export default class Movies extends Component {
             {movies.map(movie => {
               let { genre, rate, stock, title } = movie;
               return (
-                <tr>
+                <tr key={title}>
                   <td>{title}</td>
                   <td>{genre}</td>
                   <td>{stock}</td>
                   <td>{rate}</td>
+                  <td>
+                    <button
+                      className="btn btn-danger"
+                      onClick={this.deleteMovie}
+                    >
+                      delete
+                    </button>
+                  </td>
                 </tr>
               );
             })}
